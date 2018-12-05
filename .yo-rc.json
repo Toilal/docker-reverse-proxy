@@ -1,0 +1,26 @@
+{
+  "@gfi-centre-ouest/generator-docker-devbox": {
+    "promptValues": {
+      "projectName": "docker-reverse-proxy",
+      "authorName": "Rémi Alvergnat",
+      "authorEmail": "remi.alvergnat@gfi.fr",
+      "features~0": [
+        "php-fpm-apache"
+      ],
+      "features~0~php-fpm-nginx~phpVersion": "7.2",
+      "features~0~php-fpm-nginx~nginxVersion": "stable",
+      "features~0~php-fpm-nginx~phpExtensions": [],
+      "features~0~php-fpm-nginx~phpTools": [],
+      "features~0~more": false,
+      "portPrefix": 429,
+      "features~0~php-fpm-apache~phpVersion": "7.2",
+      "features~0~php-fpm-apache~apacheVersion": "2.4",
+      "features~0~php-fpm-apache~phpExtensions": [],
+      "features~0~php-fpm-apache~phpTools": [],
+      "features~0~php-fpm-apache~apacheExtensions": [
+        "rewrite",
+        "proxy-http"
+      ]
+    }
+  }
+}

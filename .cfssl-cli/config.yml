@@ -1,0 +1,21 @@
+cfssl:
+  host: cfssl.etudes.local
+  port: 443
+  ssl: True
+  verify_cert: True
+certificate_request: # Certificate Request configuration
+  names: # Subject Informations to be added to the request.
+    - org_name: ~ # The full legal name of the organization. Do not abbreviate.
+      org_unit: ~ # Section of the organization.
+      city: ~ # The city where the organization is legally located.
+      state: ~ # The state or province where your organization is legally located. Can not be abbreviated.
+      country: ~ # The two letter ISO abbreviation for the country.
+writer:
+  chain: chain.pem # Chain file to prepend to generated certificates (absolute path, or relative path from config.yml)
+  filenames:
+    private_key: '%s.key'
+    certificate: '%s.crt'
+    certificate_request: '%s.csr'
+    certificate_der: '%s.crt.der'
+    certificate_request_der: '%s.csr.der'
+  destination: ~ # Default destination filepath of created files

@@ -1,0 +1,5 @@
+/docker-compose.override.yml
+/.docker/.ca-certificates
+/.init/
+/.bash_enter.env
+/.bin/jq

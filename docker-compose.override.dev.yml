@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+  web:
+    networks:
+      - default
+      - nginx-proxy
+    environment:
+      - 'VIRTUAL_HOST=${DOCKER_DEVBOX_DOMAIN_PREFIX}.${DOCKER_DEVBOX_DOMAIN}'
+networks:
+  nginx-proxy:
+    external: true

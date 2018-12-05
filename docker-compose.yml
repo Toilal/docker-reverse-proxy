@@ -1,0 +1,12 @@
+version: '2.2'
+services:
+  web:
+    build:
+      context: .docker
+      dockerfile: web/Dockerfile
+    image: '${DOCKER_DEVBOX_REGISTRY}docker-reverse-proxy/web'
+    init: true
+    restart: '${DOCKER_DEVBOX_RESTART_POLICY}'
+    volumes:
+      - '${COMPOSE_PROJECT_DIR}:/var/www/html'
+      - '${COMPOSE_PROJECT_DIR}/.docker/web/apache.conf:/usr/local/apache2/conf/custom/apache.conf'
