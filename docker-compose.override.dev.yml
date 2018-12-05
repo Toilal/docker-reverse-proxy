@@ -6,6 +6,8 @@ services:
       - nginx-proxy
     environment:
       - 'VIRTUAL_HOST=${DOCKER_DEVBOX_DOMAIN_PREFIX}.${DOCKER_DEVBOX_DOMAIN}'
+    ports:
+      - '${DOCKER_DEVBOX_PORT_PREFIX}80:80'
 networks:
   nginx-proxy:
     external: true
